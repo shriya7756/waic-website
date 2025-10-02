@@ -1,43 +1,51 @@
 .responsive {
   position: relative;
-  width: 1441px;
+  width: 1440px;
   height: 8791px;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hide right-side scrollbars while keeping scrolling enabled */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+html, body {
+  -ms-overflow-style: none; /* IE/Edge */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0px; /* Chrome/Safari */
+  height: 0px;
 }
 
 .responsive .frame {
-  position: absolute;
-  width: calc(100% - 390px);
-  height: 100%;
-  top: 0;
-  left: 390px;
-  display: flex;
-  background-color: #ffffff;
+  display: none;
 }
 
 .responsive .element {
-  margin-left: -390px;
-  flex: 1;
-  width: 1441px;
-  background-color: #ffffff;
+  display: none;
 }
 
 .responsive .element-wrapper {
   position: absolute;
-  width: calc(100% - 1440px);
+  width: 100%;
   height: 100%;
   top: 0;
-  left: 1440px;
+  left: 0;
   display: flex;
   background-color: #ffffff;
 }
 
 .responsive .div {
-  margin-left: -1440px;
   flex: 1;
-  width: 1441px;
+  width: 100%;
   position: relative;
   background-color: var(--colourneutralblueblack);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .responsive .pink-light-gradient {
@@ -46,50 +54,27 @@
   top: 0;
   left: 0;
   height: 1024px;
-  background-color: #30081e;
+  /* Hero section uses a background image placeholder; content overlays it */
+  background-image: url('images/pink light gradient.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #30081e; /* fallback */
 }
 
 .responsive .pink-left {
-  left: 0;
-  width: 720px;
-  background: conic-gradient(
-    from 270deg at 50% 50%,
-    rgba(248, 248, 248, 1) 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(170, 170, 170, 1) 99%
-  );
-  position: absolute;
-  top: 0;
-  height: 1024px;
+  /* hide gradient layer over hero image */
+  display: none;
 }
 
 .responsive .pink-right {
-  left: 720px;
-  width: 720px;
-  transform: rotate(180deg);
-  background: conic-gradient(
-    from 270deg at 50% 50%,
-    rgba(248, 248, 248, 1) 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(170, 170, 170, 1) 99%
-  );
-  position: absolute;
-  top: 0;
-  height: 1024px;
+  /* hide gradient layer over hero image */
+  display: none;
 }
 
 .responsive .pink-top {
-  left: 0;
-  width: 1440px;
-  background: linear-gradient(
-    180deg,
-    rgba(49, 9, 30, 1) 0%,
-    rgba(49, 9, 30, 0) 50%,
-    rgba(6, 6, 26, 1) 100%
-  );
-  position: absolute;
-  top: 0;
-  height: 1024px;
+  /* hide top overlay so image is fully visible */
+  display: none;
 }
 
 .responsive .logo {
@@ -136,38 +121,43 @@
   position: relative;
   width: 1230px;
   margin-top: -1.00px;
-  font-family: "Work Sans", Helvetica;
+  font-family: "Work Sans", sans-serif;
   font-weight: 400;
   color: var(--colourneutrallight);
   font-size: 64px;
   text-align: center;
-  line-height: 64px;
+  line-height: 80px;
 }
 
 .responsive .text-wrapper {
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   color: #f9fcfd;
   letter-spacing: -0.82px;
-  line-height: 49.1px;
+  line-height: 80px;
 }
 
 .responsive .span {
+  font-family: "Work Sans", sans-serif;
   color: #f9fcfd;
   letter-spacing: -0.82px;
-  line-height: 49.1px;
+  line-height: 80px;
 }
 
 .responsive .text-wrapper-2 {
-  font-family: "Fraunces", Helvetica;
+  font-family: "Fraunces", serif;
+  font-weight: 400;
   color: #f9fcfd;
   letter-spacing: -0.41px;
+  line-height: 80px;
 }
 
 .responsive .text-wrapper-3 {
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   color: #f9fcfd;
   letter-spacing: 0;
-  line-height: 0.1px;
+  line-height: 80px;
 }
 
 .responsive .div-wrapper {
@@ -202,8 +192,9 @@
   background-color: #f1247be6;
   border-radius: 99px;
   overflow: hidden;
-  box-shadow: inset 1px 1px 2px #ecf0f44c, inset -1px -1px 2px #ecf0f41a, inset
-    0px 1px 10px #ecf0f44c;
+  box-shadow: inset 1px 1px 2px #ecf0f44c, inset -1px -1px 2px #ecf0f41a, inset 0px 1px 10px #ecf0f44c;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .responsive .button-text {
@@ -232,6 +223,23 @@
   font-style: var(--typography-button-CTA-primary-font-style);
 }
 
+/* ENROLL NOW hover styles (from spec images) */
+.responsive .button-text-wrapper:hover {
+  background-color: #ECF1F4;
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.1),
+    inset 0 1px 10px rgba(255, 255, 255, 0.3);
+}
+
+.responsive .button-text-wrapper:hover .enroll-now {
+  color: #F1247B;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.72px; /* ~4% */
+  text-transform: uppercase;
+}
+
 .responsive .vector {
   position: absolute;
   top: 652px;
@@ -242,13 +250,21 @@
 
 .responsive .img {
   position: absolute;
+  top: 652px;
+  left: 1137px;
+  width: 176px;
+  height: 10px;
+}
+
+.responsive .vector-2 {
+  position: absolute;
   top: 728px;
   left: 204px;
   width: 219px;
   height: 10px;
 }
 
-.responsive .vector-2 {
+.responsive .vector-3-underline {
   position: absolute;
   top: 727px;
   left: 609px;
@@ -359,6 +375,7 @@
   background-color: var(--colourneutrallight);
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .responsive .button::before {
@@ -372,11 +389,31 @@
     rgba(6, 6, 26, 0.9) 0%,
     rgba(51, 51, 51, 0.7) 100%
   );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: 1;
   pointer-events: none;
+}
+
+/* Hover state: subtle background lift and darker gradient border */
+.responsive .button:hover {
+  background-color: rgba(250, 252, 254, 0.95);
+  box-shadow: 0 2px 8px rgba(6, 6, 26, 0.12);
+}
+
+.responsive .button:hover::before {
+  background: linear-gradient(90deg, #06061a 0%, #333333 100%);
+}
+
+/* CTA label default vs hover (from spec images) */
+.responsive .button .text-wrapper-4 {
+  opacity: 0.7; /* 70% when not hovered */
+}
+
+.responsive .button:hover .text-wrapper-4 {
+  opacity: 1; /* 100% on hover */
 }
 
 .responsive .link-text-icon {
@@ -405,10 +442,11 @@
   font-weight: var(--typography-button-CTA-secondary-font-weight);
   color: var(--colourneutralblueblack);
   font-size: var(--typography-button-CTA-secondary-font-size);
-  letter-spacing: var(--typography-button-CTA-secondary-letter-spacing);
-  line-height: var(--typography-button-CTA-secondary-line-height);
+  letter-spacing: 0px;
+  line-height: 100%;
   white-space: nowrap;
   font-style: var(--typography-button-CTA-secondary-font-style);
+  opacity: 0.7;
 }
 
 .responsive .arow-icon {
@@ -445,7 +483,7 @@
 .responsive .rectangle-2 {
   position: absolute;
   width: 100%;
-  top: 2484px;
+  top: 2524px; /* shifted down to avoid overlap with previous section */
   left: 0;
   height: 520px;
   background-color: var(--colourneutralblueblack);
@@ -453,7 +491,7 @@
 
 .responsive .impact {
   position: absolute;
-  top: 2584px;
+  top: 2624px; /* maintain spacing inside the dark band */
   left: calc(50.00% - 584px);
   width: 1168px;
   height: 255px;
@@ -909,6 +947,22 @@
   height: 2000px;
 }
 
+/* Vertical scroll snapping container (no inner scrollbar to avoid double scrollbars) */
+.responsive .program-scroll-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: visible; /* remove inner scrollbar */
+  scroll-snap-type: none; /* disable snapping within container to use page scroll */
+}
+
+.responsive .card,
+.responsive .card-wrapper {
+  scroll-snap-align: start;
+}
+
 .responsive .card {
   position: absolute;
   top: 500px;
@@ -1064,6 +1118,18 @@
   height: 1300px;
 }
 
+/* Replace entire testimonial section with a placeholder image */
+.responsive .testimonial {
+  background-image: url('images/Testimonial.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.responsive .testimonial > *:not(.rectangle-8) {
+  display: none; /* hide inner content while keeping layout height */
+}
+
 .responsive .text-wrapper-12 {
   position: absolute;
   top: 43px;
@@ -1094,7 +1160,7 @@
   position: relative;
   width: 300px;
   margin-top: -1.00px;
-  font-family: "Indie Flower", Helvetica;
+  font-family: "Indie Flower", cursive;
   font-weight: 400;
   color: var(--colourneutraldarkgrey);
   font-size: 18px;
@@ -1190,7 +1256,7 @@
   position: relative;
   width: 300px;
   margin-top: -1.00px;
-  font-family: "Indie Flower", Helvetica;
+  font-family: "Indie Flower", cursive;
   font-weight: 400;
   color: var(--colourneutraldarkgrey);
   font-size: 18px;
@@ -1352,7 +1418,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Work Sans", Helvetica;
+  font-family: "Work Sans", sans-serif;
   font-weight: 400;
   color: var(--colourneutralslate);
   font-size: 14px;
@@ -1549,7 +1615,7 @@
   height: 176px;
   margin-top: -27.00px;
   margin-bottom: -25.00px;
-  font-family: "Work Sans", Helvetica;
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   color: var(--colourneutralblueblack);
   font-size: 260px;
@@ -1581,7 +1647,7 @@
   height: 176px;
   margin-top: -27.00px;
   margin-bottom: -25.00px;
-  font-family: "Work Sans", Helvetica;
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   color: var(--colourneutralblueblack);
   font-size: 220px;
@@ -1624,25 +1690,33 @@
   height: 10px;
 }
 
-.responsive .navbar {
+.navbar {
   display: flex;
-  width: 1200px;
-  height: 50px;
+  width: 1000px; /* Fixed (1,200px) */
+  height: 50px;  /* Fixed (50px) */
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 8px 16px;
-  position: absolute;
-  top: 40px;
-  left: calc(50.00% - 600px);
-  background-color: #ecf0f403;
+  gap: 10px;     /* Gap: 10px */
+  padding: 8px 16px; /* 8px | 16px | 8px | 16px */
+  position: fixed; /* keep navbar visible */
+  top: 40px;      /* Top: 40px */
+  left: 50%;      /* Center horizontally */
+  transform: translateX(-50%); /* Center the navbar */
+  background-color: rgba(236, 241, 244, 0.01); /* #ECF1F4 at 1% */
+  border: 1px solid rgba(217, 217, 217, 0.01); /* #D9D9D9 at 1% */
   border-radius: 99px;
   overflow: hidden;
-  box-shadow: inset 1px 1px 2px #ffffff4c, inset -1px -1px 2px #ffffff1a, inset
-    0px 1px 10px #ffffff33;
+  /* Three inner shadows from the spec */
+  box-shadow:
+    inset 1px 1px 2px rgba(255, 255, 255, 0.30),  /* #FFFFFF 30% */
+    inset -1px -1px 2px rgba(255, 255, 255, 0.10), /* #FFFFFF 10% */
+    inset 0 1px 10px rgba(255, 255, 255, 0.20);    /* #FFFFFF 20% */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
-.responsive .texture {
+.texture {
   position: absolute;
   top: 0;
   left: 0;
@@ -1650,7 +1724,7 @@
   height: 50px;
 }
 
-.responsive .nav-bar {
+.nav-bar {
   display: flex;
   width: 1200px;
   height: 52px;
@@ -1664,7 +1738,7 @@
   margin-right: -16.00px;
 }
 
-.responsive .logo-2 {
+.logo-2 {
   position: relative;
   width: 84px;
   height: 50px;
@@ -1672,7 +1746,7 @@
   margin-bottom: -3.00px;
 }
 
-.responsive .nav-nav-menu {
+.nav-nav-menu {
   display: flex;
   width: 423px;
   align-items: flex-start;
@@ -1680,7 +1754,7 @@
   position: relative;
 }
 
-.responsive .nav-list-item {
+.nav-list-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1690,7 +1764,7 @@
   flex: 0 0 auto;
 }
 
-.responsive .text-wrapper-22 {
+.text-wrapper-22 {
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
@@ -1703,3 +1777,60 @@
   white-space: nowrap;
   font-style: var(--typography-button-nav-link-font-style);
 }
+
+/* Link styles for navigation and buttons */
+.nav-nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.nav-nav-menu a:hover {
+  color: var(--colorprimarypink);
+}
+
+.button.know-more {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-text-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--colorprimarypink);
+}
+
+.social-icon a {
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icon a:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure buttons maintain their styling when converted to links */
+a.button {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+a.button-text-wrapper {
+  display: flex;
+  text-decoration: none;
+}
+
+/* Removed CSS scaling; handled via script.js for precise centering without distortion */

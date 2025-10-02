@@ -43,6 +43,7 @@
         // Add scroll indicators for the program section
         function addScrollIndicators() {
             const programSection = document.querySelector('.flagship-program');
+            if (!programSection) return; // guard: element not present on this page
             const indicator = document.createElement('div');
             indicator.innerHTML = '<div style="text-align: center; margin-top: 20px; color: rgba(255,255,255,0.6); font-size: 0.9rem;">Scroll to explore programs ↓</div>';
             programSection.appendChild(indicator);
@@ -83,36 +84,27 @@
             navLinks.classList.toggle('active');
         }
 
-        // Button hover effects
-        const enrollBtn = document.getElementById('enroll-btn');
-        if (enrollBtn) {
-            enrollBtn.addEventListener('mouseover', function() {
-                this.src = 'placeholder_hover.png';
-            });
-            enrollBtn.addEventListener('mouseout', function() {
-                this.src = 'placeholder_normal.png';
-            });
-        }
+        // Button hover effects (generic for all Know More/Coming Soon buttons)
+        document.addEventListener('DOMContentLoaded', function() {
+            const arrowButtons = document.querySelectorAll('.button.know-more');
+            arrowButtons.forEach(btn => {
+                const img = btn.querySelector('.pixel-arrow');
+                const defaultSrc = btn.getAttribute('data-arrow-default') || (img ? img.src : 'images/Pixel Arrow.png');
+                const hoverSrc = btn.getAttribute('data-arrow-hover') || 'images/Pixel Arrow straight.png';
+                if (!img) return;
 
-        const knowMore1 = document.getElementById('know-more-1');
-        if (knowMore1) {
-            knowMore1.addEventListener('mouseover', function() {
-                this.querySelector('img').src = 'images/Pixel Arrow straight.png';
-            });
-            knowMore1.addEventListener('mouseout', function() {
-                this.querySelector('img').src = 'images/Pixel Arrow.png';
-            });
-        }
+                // Preload hover image
+                const preload = new Image();
+                preload.src = hoverSrc;
 
-        const knowMore2 = document.getElementById('know-more-2');
-        if (knowMore2) {
-            knowMore2.addEventListener('mouseover', function() {
-                this.querySelector('img').src = 'images/Pixel Arrow straight.png';
+                btn.addEventListener('mouseenter', function() {
+                    img.src = hoverSrc;
+                });
+                btn.addEventListener('mouseleave', function() {
+                    img.src = defaultSrc;
+                });
             });
-            knowMore2.addEventListener('mouseout', function() {
-                this.querySelector('img').src = 'images/Pixel Arrow.png';
-            });
-        }
+        });
 
         // Add mobile menu styles dynamically if screen is small
         if (window.innerWidth <= 768) {
@@ -152,3 +144,24 @@
             const navbar = document.querySelector('.navbar');
             navbar.appendChild(hamburger);
         }
+
+        // Scale entire canvas to fit viewport width without right-edge clipping
+        (function() {
+            const BASE_WIDTH = 1440;
+            function updateScale() {
+                const root = document.querySelector('.responsive');
+                if (!root) return;
+                const viewportW = document.documentElement.clientWidth;
+                const scale = Math.min(1, viewportW / BASE_WIDTH);
+                root.style.width = BASE_WIDTH + 'px';
+                root.style.position = 'relative';
+                root.style.left = '50%';
+                root.style.transformOrigin = 'top center';
+                // Center via left:50% and translateX(-50%), then scale
+                root.style.transform = 'translateX(-50%) scale(' + scale + ')';
+            }
+            document.addEventListener('DOMContentLoaded', updateScale);
+            window.addEventListener('resize', updateScale);
+            window.addEventListener('orientationchange', updateScale);
+            updateScale();
+        })();

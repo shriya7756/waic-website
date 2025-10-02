@@ -1,0 +1,114 @@
+/* Solutions Section Styles */
+
+.responsive .how-we-solve-the {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--colourneutralblueblack);
+}
+
+.responsive .rectangle-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.responsive .sub-head-2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.responsive .text-wrapper-6 {
+  font-family: var(--typography-heading-h2-font-family);
+  font-weight: var(--typography-heading-h2-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-heading-h2-font-size);
+  letter-spacing: var(--typography-heading-h2-letter-spacing);
+  line-height: var(--typography-heading-h2-line-height);
+  text-align: center;
+}
+
+.responsive .rectangle-5 {
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background-color: var(--colorprimarypink);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.responsive .pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.responsive .frame-9,
+.responsive .frame-13 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.responsive .frame-10,
+.responsive .frame-14 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.responsive .pillar-no-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.responsive .pillar-no {
+  font-family: var(--typography-button-nav-link-font-family);
+  font-weight: var(--typography-button-nav-link-font-weight);
+  color: var(--colorprimarypink);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.responsive .frame-11 {
+  display: flex;
+  align-items: center;
+}
+
+.responsive .text-wrapper-7 {
+  font-family: var(--typography-heading-h3-font-family);
+  font-weight: var(--typography-heading-h3-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-heading-h3-font-size);
+  letter-spacing: var(--typography-heading-h3-letter-spacing);
+  line-height: var(--typography-heading-h3-line-height);
+}
+
+.responsive .frame-12 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.responsive .start-with-the,
+.responsive .join-a-community-of {
+  font-family: var(--typography-body-paragraph-font-family);
+  font-weight: var(--typography-body-paragraph-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-body-paragraph-font-size);
+  letter-spacing: var(--typography-body-paragraph-letter-spacing);
+  line-height: var(--typography-body-paragraph-line-height);
+}

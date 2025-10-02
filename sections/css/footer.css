@@ -1,0 +1,118 @@
+/* Footer Section Styles */
+
+.responsive .text-wrapper-15 {
+  font-family: var(--typography-heading-h2-font-family);
+  font-weight: var(--typography-heading-h2-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-heading-h2-font-size);
+  text-align: center;
+  margin: 60px 0;
+}
+
+.responsive .footer {
+  position: relative;
+  width: 100%;
+  background-color: var(--colourneutralblueblack);
+  padding: 80px 0 40px;
+}
+
+.responsive .footer-graphic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.responsive .footer-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.responsive .footer-link {
+  display: flex;
+  width: 1240px;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.responsive .programs-link,
+.responsive .footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.responsive .frame-25 {
+  display: flex;
+  align-items: center;
+}
+
+.responsive .text-wrapper-16,
+.responsive .text-wrapper-17 {
+  font-family: var(--typography-button-nav-link-font-family);
+  font-weight: var(--typography-button-nav-link-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-button-nav-link-font-size);
+  letter-spacing: var(--typography-button-nav-link-letter-spacing);
+  line-height: var(--typography-button-nav-link-line-height);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.responsive .text-wrapper-16:hover,
+.responsive .text-wrapper-17:hover {
+  color: var(--colorprimarypink);
+}
+
+.responsive .stay-updated-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.responsive .social-icon {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.responsive .img-4 {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.responsive .img-4:hover {
+  transform: scale(1.1);
+}
+
+.responsive .frame-28,
+.responsive .frame-29 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.responsive .text-wrapper-20,
+.responsive .text-wrapper-21 {
+  font-family: var(--typography-heading-h1-font-family);
+  font-weight: var(--typography-heading-h1-font-weight);
+  color: var(--colourneutrallight);
+  font-size: 24px;
+  letter-spacing: 2px;
+}
