@@ -5,6 +5,7 @@
   transform: rotate(0deg);
   opacity: 1;
   overflow-x: hidden;
+  background: #06061A;
 }
 
 body {
@@ -1370,7 +1371,7 @@ body::-webkit-scrollbar {
 }
 
 .responsive .footer-graphic {
-  display: none;
+  opacity: 0.9;
 }
 
 .responsive .footer-bg {
@@ -1651,7 +1652,7 @@ body::-webkit-scrollbar {
   margin-bottom: -25.00px;
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
-  color: var(--colourneutralblueblack);
+  color: #ECF1F4;
   font-size: 220px;
   text-align: center;
   letter-spacing: -4.40px;
