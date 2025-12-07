@@ -1,0 +1,78 @@
+/* Testimonials Section Styles */
+
+.responsive .testimonial {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--colourneutralblueblack);
+}
+
+.responsive .text-wrapper-12 {
+  font-family: var(--typography-heading-h2-font-family);
+  font-weight: var(--typography-heading-h2-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-heading-h2-font-size);
+  letter-spacing: var(--typography-heading-h2-letter-spacing);
+  line-height: var(--typography-heading-h2-line-height);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.responsive .frame-19,
+.responsive .frame-21,
+.responsive .frame-22,
+.responsive .frame-23,
+.responsive .frame-24 {
+  display: flex;
+  flex-direction: column;
+  width: 590px;
+  gap: 20px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.responsive .the-AI-program-was-a,
+.responsive .the-AI-program-was-a-2 {
+  font-family: var(--typography-body-paragraph-font-family);
+  font-weight: var(--typography-body-paragraph-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-body-paragraph-font-size);
+  letter-spacing: var(--typography-body-paragraph-letter-spacing);
+  line-height: var(--typography-body-paragraph-line-height);
+  font-style: italic;
+}
+
+.responsive .frame-20 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.responsive .alina-fatema {
+  font-family: var(--typography-button-nav-link-font-family);
+  font-weight: var(--typography-button-nav-link-font-weight);
+  color: var(--colorprimarypink);
+  font-size: var(--typography-button-nav-link-font-size);
+  letter-spacing: var(--typography-button-nav-link-letter-spacing);
+  text-transform: uppercase;
+}
+
+.responsive .st-xavier-s-college {
+  font-family: var(--typography-body-paragraph-font-family);
+  font-weight: var(--typography-body-paragraph-font-weight);
+  color: var(--colourneutrallight);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.responsive .text-wrapper-13 {
+  color: var(--colourneutrallight);
+}
+
+.responsive .text-wrapper-14 {
+  color: var(--colorprimarypink);
+  font-weight: bold;
+}

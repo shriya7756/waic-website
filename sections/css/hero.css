@@ -1,0 +1,162 @@
+/* Hero Section Styles */
+
+.responsive .pink-light-gradient {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 1024px;
+  background-image: url('../../images/pink light gradient.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #30081e; /* fallback */
+}
+
+.responsive .pink-left {
+  display: none;
+}
+
+.responsive .pink-right {
+  display: none;
+}
+
+.responsive .pink-top {
+  display: none;
+}
+
+.responsive .logo {
+  position: absolute;
+  top: 200px;
+  left: calc(50.00% - 242px);
+  width: 485px;
+  height: 290px;
+}
+
+.responsive .frame-2 {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 562px;
+  left: calc(50.00% - 620px);
+}
+
+.responsive .frame-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.responsive .we-are-on-a-mission-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.responsive .we-are-on-a-mission {
+  position: relative;
+  width: 1230px;
+  margin-top: -1.00px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: var(--colourneutrallight);
+  font-size: 64px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.responsive .text-wrapper {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: #f9fcfd;
+  letter-spacing: -0.82px;
+  line-height: 80px;
+}
+
+.responsive .text-wrapper-2 {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  color: #f9fcfd;
+  letter-spacing: -0.41px;
+  line-height: 80px;
+}
+
+.responsive .text-wrapper-3 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: #f9fcfd;
+  letter-spacing: 0;
+  line-height: 80px;
+}
+
+.responsive .div-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 2px 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.responsive .p {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--typography-title-subtitle-font-family);
+  font-weight: var(--typography-title-subtitle-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-title-subtitle-font-size);
+  text-align: center;
+  letter-spacing: var(--typography-title-subtitle-letter-spacing);
+  line-height: var(--typography-title-subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--typography-title-subtitle-font-style);
+}
+
+.responsive .button-text-wrapper {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  background-color: #f1247be6;
+  border-radius: 99px;
+  overflow: hidden;
+  box-shadow: inset 1px 1px 2px #ecf0f44c, inset -1px -1px 2px #ecf0f41a, inset 0px 1px 10px #ecf0f44c;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.responsive .button-text {
+  display: flex;
+  width: 220px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.responsive .enroll-now {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--typography-button-cta-font-family);
+  font-weight: var(--typography-button-cta-font-weight);
+  color: var(--colourneutrallight);
+  font-size: var(--typography-button-cta-font-size);
+  letter-spacing: var(--typography-button-cta-letter-spacing);
+  line-height: var(--typography-button-cta-line-height);
+  white-space: nowrap;
+  font-style: var(--typography-button-cta-font-style);
+}
